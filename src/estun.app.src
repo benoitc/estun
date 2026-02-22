@@ -1,6 +1,6 @@
 {application, estun, [
     {description, "Erlang STUN client for NAT traversal and hole punching"},
-    {vsn, "0.1.0"},
+    {vsn, "0.1.1"},
     {registered, [estun_sup, estun_pool]},
     {mod, {estun_app, []}},
     {applications, [
