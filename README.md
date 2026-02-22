@@ -127,7 +127,7 @@ io:format("Public: ~p:~p~n", [MyAddr#stun_addr.address, MyAddr#stun_addr.port]).
 socket:sendto(Socket, <<"Hello!">>, #{family => inet, addr => PeerIP, port => PeerPort}).
 ```
 
-See [examples/simple_p2p/](examples/simple_p2p/) for a runnable test.
+See [examples/simple_p2p/](https://github.com/benoitc/estun/tree/main/examples/simple_p2p) for a runnable example.
 
 ### Docker P2P (Cross-Subnet)
 
@@ -136,15 +136,12 @@ cd examples/docker_p2p && ./run.sh
 ```
 
 Creates two isolated Docker networks and demonstrates P2P communication between them.
-See [examples/docker_p2p/](examples/docker_p2p/) for details.
+See [examples/docker_p2p/](https://github.com/benoitc/estun/tree/main/examples/docker_p2p) for details.
 
 ## Documentation
 
-- [API Reference](docs/api/estun.md)
-- [Getting Started](docs/getting-started/quickstart.md)
-- [Hole Punching Guide](docs/guide/hole-punching.md)
-- [NAT Discovery](docs/guide/nat-discovery.md)
+Full documentation is available at [benoitc.github.io/estun](https://benoitc.github.io/estun/).
 
 ## License
 
-MIT License - see [LICENSE](LICENSE) for details.
+MIT License - see [LICENSE](https://github.com/benoitc/estun/blob/main/LICENSE) for details.
