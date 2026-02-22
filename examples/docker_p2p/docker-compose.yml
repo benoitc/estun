@@ -1,0 +1,58 @@
+services:
+  # Signaling server - accessible from both networks
+  signaling:
+    build:
+      context: ../..
+      dockerfile: examples/docker_p2p/Dockerfile
+    command: ["erl", "-pa", "/app/estun/ebin", "-pa", "/app", "-noshell", "-sname", "signaling", "-eval", "docker_signaling:start()."]
+    networks:
+      subnet_a:
+        ipv4_address: 172.20.0.10
+      subnet_b:
+        ipv4_address: 172.21.0.10
+    environment:
+      - ROLE=signaling
+
+  # Peer Alice on subnet A
+  alice:
+    build:
+      context: ../..
+      dockerfile: examples/docker_p2p/Dockerfile
+    command: ["erl", "-pa", "/app/estun/ebin", "-pa", "/app", "-noshell", "-eval", "docker_peer:start(alice, \"172.20.0.10\")."]
+    networks:
+      subnet_a:
+        ipv4_address: 172.20.0.100
+    depends_on:
+      - signaling
+    environment:
+      - ROLE=peer
+      - NAME=alice
+
+  # Peer Bob on subnet B
+  bob:
+    build:
+      context: ../..
+      dockerfile: examples/docker_p2p/Dockerfile
+    command: ["erl", "-pa", "/app/estun/ebin", "-pa", "/app", "-noshell", "-eval", "docker_peer:start(bob, \"172.21.0.10\")."]
+    networks:
+      subnet_b:
+        ipv4_address: 172.21.0.100
+    depends_on:
+      - signaling
+    environment:
+      - ROLE=peer
+      - NAME=bob
+
+networks:
+  subnet_a:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
+          gateway: 172.20.0.1
+  subnet_b:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.21.0.0/16
+          gateway: 172.21.0.1

@@ -1,0 +1,19 @@
+{application, estun, [
+    {description, "Erlang STUN client for NAT traversal and hole punching"},
+    {vsn, "0.1.0"},
+    {registered, [estun_sup, estun_pool]},
+    {mod, {estun_app, []}},
+    {applications, [
+        kernel,
+        stdlib,
+        crypto
+    ]},
+    {env, [
+        {default_servers, []},
+        {default_timeout, 5000},
+        {default_retries, 7}
+    ]},
+    {modules, []},
+    {licenses, ["MIT"]},
+    {links, [{"GitHub", "https://github.com/benoitc/estun"}]}
+]}.

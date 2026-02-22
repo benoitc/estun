@@ -1,0 +1,35 @@
+# Build artifacts
+_build/
+ebin/
+*.beam
+
+# Rebar3
+.rebar3/
+rebar.lock
+
+# Documentation
+site/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Claude
+.claude/
+
+# Test artifacts
+logs/
+log/
+*.crashdump
+cover/
+
+# Dialyzer
+*.plt
