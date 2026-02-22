@@ -15,5 +15,8 @@
     ]},
     {modules, []},
     {licenses, ["MIT"]},
-    {links, [{"GitHub", "https://github.com/benoitc/estun"}]}
+    {links, [
+        {"GitHub", "https://github.com/benoitc/estun"},
+        {"Documentation", "https://benoitc.github.io/estun/"}
+    ]}
 ]}.

@@ -1,7 +1,7 @@
 site_name: estun
 site_description: Erlang STUN Client for NAT Traversal and Hole Punching
 site_author: Benoit Chesneau
-site_url: https://github.com/benoitc/estun
+site_url: https://benoitc.github.io/estun/
 
 repo_name: benoitc/estun
 repo_url: https://github.com/benoitc/estun
