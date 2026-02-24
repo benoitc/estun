@@ -3,7 +3,7 @@
 [![CI](https://github.com/benoitc/estun/actions/workflows/ci.yml/badge.svg)](https://github.com/benoitc/estun/actions/workflows/ci.yml)
 [![Hex.pm](https://img.shields.io/hexpm/v/estun.svg)](https://hex.pm/packages/estun)
 
-Modern Erlang STUN client library for OTP 28+.
+Modern Erlang STUN client library for OTP 27+.
 
 Pure Erlang implementation using the `socket` module. Supports RFC 5389 (STUN), RFC 5769 (test vectors), and RFC 5780 (NAT behavior discovery).
 
@@ -18,7 +18,7 @@ Pure Erlang implementation using the `socket` module. Supports RFC 5389 (STUN), 
 
 ## Requirements
 
-- Erlang/OTP 28 or later
+- Erlang/OTP 27 or later
 
 ## Installation
 

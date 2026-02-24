@@ -2,7 +2,7 @@
 
 ## Requirements
 
-- **Erlang/OTP 28** or later
+- **Erlang/OTP 27** or later
 - **rebar3** build tool
 
 ## Adding to Your Project

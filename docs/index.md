@@ -1,6 +1,6 @@
 # estun - Erlang STUN Client
 
-**estun** is a modern Erlang/OTP 28+ STUN client library for NAT traversal and UDP hole punching.
+**estun** is a modern Erlang/OTP 27+ STUN client library for NAT traversal and UDP hole punching.
 
 ## Features
 
@@ -8,7 +8,7 @@
 - **RFC 5780** - NAT behavior discovery
 - **RFC 5769** - Test vectors verified
 - **RFC 3489** - Classic STUN compatibility
-- **OTP 28+** - Uses modern `socket` module
+- **OTP 27+** - Uses modern `socket` module
 - **UDP Hole Punching** - P2P connection establishment
 - **gen_statem** - Robust state machine implementation
 
@@ -96,7 +96,7 @@ Full example: [examples/docker_p2p/](https://github.com/benoitc/estun/tree/main/
 
 ## Requirements
 
-- **Erlang/OTP 28** or later
+- **Erlang/OTP 27** or later
 - No external dependencies (pure Erlang)
 - Docker (for docker_p2p example)
 

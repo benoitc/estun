@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.2] - 2026-02-24
+
+### Changed
+
+- Minimum OTP version lowered from 28 to 27
+
 ## [0.1.1] - 2026-02-22
 
 ### Fixed
@@ -30,9 +36,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Technical
 
-- Pure Erlang implementation using OTP 28+ `socket` module
+- Pure Erlang implementation using OTP 27+ `socket` module
 - gen_statem-based client state machine
 - Supervisor tree with dynamic client processes
 
+[0.1.2]: https://github.com/benoitc/estun/releases/tag/v0.1.2
 [0.1.1]: https://github.com/benoitc/estun/releases/tag/v0.1.1
 [0.1.0]: https://github.com/benoitc/estun/releases/tag/v0.1.0
